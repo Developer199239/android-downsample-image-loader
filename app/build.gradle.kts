@@ -51,7 +51,9 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.okhttp)
+    implementation(libs.okhttp) {
+        because("HTTP client to download images before decoding")
+    }
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

@@ -18,7 +18,8 @@ class HomeActivity : AppCompatActivity() {
 
         val imageLoader = ImageLoader(
             applicationContext,
-            targetMemBytes = 512 * 1024,  // aim ~0.5 MB in-memory per bitmap
+//            targetMemBytes = 512 * 1024,  // aim ~0.5 MB in-memory per bitmap
+            targetMemBytes = 100 * 1024,   // ≈ 0.1 MB (100 KB)
             useRgb565 = true               // halves memory vs ARGB_8888; no alpha channel
         )
 
@@ -31,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun demoArticles(): List<Article> = listOf(
         Article(1, "A", "https://picsum.photos/id/1018/4000/3000"),
-        Article(2, "B", "https://picsum.photos/id/1015/6000/4000"),
+        Article(2, "B", "https://picsum.photos/id/1018/4000/3000"),
         Article(3, "C", "https://picsum.photos/id/1021/2048/1206"),
         Article(4, "D", "https://picsum.photos/id/1003/1181/1772"),
         Article(5, "E", "https://picsum.photos/id/1025/4951/3301")
